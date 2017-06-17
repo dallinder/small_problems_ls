@@ -1,9 +1,13 @@
-def reverse_sentence(sentence)
-  if sentence >= 5
-    sentence.reverse
-  else
-    puts 'please enter more words.'
+def reverse_words(words)
+  words = words.split
+
+  words.each do |word|
+  word.reverse! if word.length >= 5
   end
+  
+  words.join(' ')
 end
 
-puts reverse_sentence("Hello World")
+puts reverse_words("Launch School")
+puts reverse_words("Professional")
+puts reverse_words("Walk around the block")
